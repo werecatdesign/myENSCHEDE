@@ -1,0 +1,645 @@
+/* ---------------------------------------------------------------- GENERAL STUFF --------------------------------------------------------------------- */
+
+/* Font: Vladivostok */
+@font-face {
+	font-family: Vladivostok;
+	src:
+		url(fonts/vladivostok/bold.eot), /* IE9 Compat Modes */
+		url(fonts/vladivostok/bold.woff2) format("woff2"), /* Super Modern Browsers */
+		url(fonts/vladivostok/bold.woff) format("woff"), /* Pretty Modern Browsers */
+		url(fonts/vladivostok/bold.ttf) format("truetype"); /* Safari, Android, iOS */
+	font-style: normal;
+	font-weight: 600;
+}
+
+/* Font: Objectivity */
+@font-face {
+    font-family: "Objectivity";
+    src: url("fonts/objectivity/Objectivity-Regular.ttf");    
+}
+
+
+html, body {
+    margin: auto;
+    text-align: center;
+    background-color: #0D0D0D;
+    color: #ffffff;
+}
+
+h1 {
+    font-family: Vladivostok;
+    font-size: 3.5vh;
+    text-transform: uppercase;
+}
+
+p, a, .dropped, span {
+    font-family: Objectivity;
+}
+
+p {
+    font-size: 3.2vh;
+}
+
+a {
+    font-size: 3.2vh;
+}
+
+.hidden {
+    display: none;
+}
+
+.button {
+    font-size: 3vh;
+}
+
+/* ------------------------------------------------------------------------ HEADER --------------------------------------------------------------------- */
+
+.header {
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    width: 100%;
+    height: 12.5vh;
+    background-color: #0D0D0D;
+    top: 0;
+    z-index: 2;    
+}
+
+.header_logo {
+    flex: 0 0 80vw;
+}
+
+.header_logo img {
+    max-height: 10.5vh;
+}
+
+/* ------------------------------------------------------------------------ MENU --------------------------------------------------------------------- */
+
+.menu_icon {
+    flex: 0 0 20vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu_icon:hover {
+    background-color: #BE0731;
+}
+
+.menu_icon:active {
+    background-color: #BE0731;
+}
+
+.menu_icon img {
+    height: 5vh;
+}
+
+#menudiv {
+    padding: 1vh 0 0 0;
+    background-color: #BE0731;
+    margin-bottom: -12.5vh;
+    position: fixed;
+    width: 100vw;
+    z-index: 2;
+}
+
+#invisiblemenu {
+    margin-top: 12.5vh;
+    padding: 1vh 0;
+    background-color: #BE0731;
+    margin-bottom: -12.5vh;
+}
+
+.menu_item {
+    border-bottom: 0.1vh solid #71051e;
+}
+
+.menu_item:hover {
+    background-color: #ffffff;
+}
+
+.menu_item:active {
+    background-color: #ffffff;
+}
+
+.menu_item a {
+    text-decoration: none;
+    color: #ffffff;
+    line-height: 5vh;
+}
+
+.menu_item a:active {
+    color: #000000;
+}
+
+.menu_item a:hover {
+    color: #000000;
+}
+
+/* ------------------------------------------------------------------------ COLOURED BOXES --------------------------------------------------------------------- */
+
+.bodytext {
+    margin-top: 12.5vh;
+}
+
+.whitebox, .redbox {
+    padding: 0.5vh 0;
+}
+
+.whitebox {
+    background-color: #ffffff;    
+}
+
+.redbox {
+    background-color: #BE0731;
+    margin: -0.5vh 0;
+}
+
+.redbox h1 {
+    color: #ffffff;
+}
+
+.whitebox h1, .whitebox p {
+    color: #0D0D0D;
+    margin: 1vh 3vw;
+}
+
+.whitebox img {
+    width: 100vw;
+    margin-bottom: -1vh;
+}
+
+#firstbox {
+    padding-top: 1.5vh;
+}
+
+/* ------------------------------------------------------------------------ PAGE TOP --------------------------------------------------------------------- */
+
+.redbox {
+    background-repeat: none;
+    background-size: cover;
+}
+
+#events_redbox {
+    background-image: url(graphics/PageTop/Top_Events.jpg);
+}
+
+#nature_redbox {
+    background-image: url(graphics/PageTop/Top_Nature.jpg);
+}
+
+#shopping_redbox {
+    background-image: url(graphics/PageTop/Top_Shopping.jpg);
+}
+
+#culture_redbox {
+    background-image: url(graphics/PageTop/Top_Culture.jpg);
+}
+
+#history_redbox {
+    background-image: url(graphics/PageTop/Top_History.jpg);
+}
+
+#evening_redbox {
+    background-image: url(graphics/PageTop/Top_Evening.jpg);
+}
+
+#doing_redbox {
+    background-image: url(graphics/PageTop/Top_Doing.jpg);
+}
+
+#eating_redbox {
+    background-image: url(graphics/PageTop/Top_Eating.jpg);
+}
+
+#event_body {
+    background-image: url(graphics/Events/events.jpg);
+    background-repeat: none;
+    background-size: cover;
+    height: 30vh;
+}
+
+/* ------------------------------------------------------------------------ INDEX: LETTER SLIDER --------------------------------------------------------------------- */
+
+.slider {
+    display: flex;
+    flex-direction: row;
+    width: 100vw; 
+    margin: 0;
+    z-index: -1;
+}
+
+.letterPicking {
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    z-index: -1;
+}
+
+.pickOne p {
+    color: #ffffff;
+    font-size: 3.2vh;
+}
+
+.arrow {
+    flex: 0 0 15vw;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0;
+    border: none;
+    background: none;
+    z-index: 5;
+}
+
+.arrow img {
+    width: 15vw;
+    z-index: 1;
+}
+
+.slider_letter {
+    flex: 0 0 70vw;
+}
+
+.slider_letter img {
+    width: 60vw;
+    margin-left: 5vw;
+    margin-right: 5vw;
+}
+
+/* ------------------------------------------------------------------------ INDEX: SMALL LETTER IMAGES --------------------------------------------------------------------- */
+
+.all_letters {
+    display: flex;
+    flex-direction: row;
+    padding: 0 2vw;
+}
+
+.smallLetter {
+    flex: 0 0 12vw;
+}
+
+.smallLetter:hover {
+    background-color: #BE0731;
+}
+
+.smallLetter:active {
+    background-color: #ffffff;
+}
+
+.smallLetter img {
+    width: 12vw;
+}
+
+
+/* ------------------------------------------------------------------------ ABOUT: EQUAL FLEX DIVISIONS --------------------------------------------------------------------- */
+
+.equalflex {
+    display: flex;
+    flex-direction: row;
+}
+
+.halfflex {
+    flex: 0 0 50vw;
+}
+
+.halfflex img {
+    width: 15vw;
+}
+
+/* ------------------------------------------------------------------------ TEAM PAGE & SPONSORS --------------------------------------------------------------------- */
+
+.teammember_left, .teammember_right, .category_intro {
+    display: flex;
+    flex-direction: row;
+    padding: 0 2vw;
+}
+
+.teammember_left {
+    background-color: #0D0D0D;
+}
+
+.teammember_left p {
+    color: #ffffff;
+}
+
+.teamintro img {
+    width: 100vw;
+}
+
+.whitebox p {
+    font-size: 3.2vh;
+}
+
+.portrait {
+    flex: 0 0 40vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.portrait img {
+    margin: 0.5vh 2vw;
+    width: 32vw;
+}
+
+.role {
+    flex: 0 0 58vw;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    flex: 0 0 1;
+}
+
+.nothingness {
+    flex: 1 1 0;
+}
+
+/* ------------------------------------------------------------------------ CATEGORY DIVS --------------------------------------------------------------------- */
+
+.category_letter, .category content {
+    display: inline-block;
+}
+
+.category_letter img {
+    width: 10vw;
+}
+
+.category_expand {
+    margin: 0 2vw 2vh 2vw;
+}
+
+.category, .mapCat, .choose {
+    background-color: #0D0D0D;
+    color: #ffffff;
+    display: inline-block;
+    border: none;
+    border-radius: 5%;
+    padding: 1vh 3vw;
+    margin: 0.5vh 0.5vw;
+    font-size: 3vh;
+}
+
+.search {
+    margin: 1vh 0;
+    background-color: #ffffff;
+    color: #0D0D0D;
+    font-weight: 800;
+    font-size: 3vh;
+    border: none;
+    border-radius: 5%;
+    padding: 1vh 3vw;
+}
+
+
+/* ------------------------------------------------------------------------ DROPDOWN DIVS --------------------------------------------------------------------- */
+
+.dropped {
+    margin: 0;
+    position: absolute;
+}
+
+.dropped_item {
+    background-color: #0D0D0D;
+    color: #ffffff;
+    font-size: 3vh;
+    width: 50vw;
+    padding: 0.5vh 0;
+}
+
+.dropped_item:hover {
+    background-color: #BE0731;
+    color: #ffffff;
+    font-weight: 800;
+}
+
+.dropdown_date {
+    background-color: #0D0D0D;
+    color: #ffffff;
+    display: inline-block;
+    border: none;
+    border-radius: 5%;
+    padding: 1vh 3vw;
+    margin: 0.5vh 0;
+    font-size: 3vh;
+}
+
+.selected {
+    background-color: #BE0731;
+    color: #ffffff;
+    font-weight: 800;
+}
+
+/* ------------------------------------------------------------------------ EVENT RESULTS PAGE --------------------------------------------------------------------- */
+
+.results {
+    background-color: #ffffff;
+    margin-top: -1vh;
+    margin-bottom: -1vh;
+}
+
+.results span {
+    font-size: 2.5vh;
+    font-weight: 800;
+}
+
+.searchresult {
+    background-color: #0D0D0D;
+    color: #ffffff;
+    padding: 1vh 3vw;
+    margin: 1vh 3vw;
+}
+
+.placetime {
+    display: flex;
+    flex-direction: row;
+    margin: -0.5vh 0 0.5vh 0;
+}
+
+.placetime_half {
+    flex: 0 0 44vw;
+    padding: 1vh 0;
+    background-color: #BE0731;
+}
+
+.resultbody {
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+}
+
+.resultpic {
+    flex: 0 0 37vw;
+    display: flex; 
+    flex-direction: column;
+}
+
+.resultpic img {
+    width: 37vw;
+}
+
+.resulttext {
+    flex: 0 0 51vw;
+    text-align: left;
+    padding-left: 2vw;
+    display: flex;
+    flex-direction: column;
+    margin: 0.5vh 0;
+}
+
+.resulttext p {
+    padding: 0;
+    margin: 0;
+}
+
+.searchresult button {    
+    background-color: #BE0731;
+    border: none;
+    padding: 0.5vh 5vw;
+    border-radius: 0.5vh;
+}
+
+.searchresult a {
+    text-decoration: none;
+    color: #ffffff; 
+    font-size: 3vh;
+    font-family: Objectivity;
+    font-weight: 800;
+}
+
+.whitefiller {
+    height: 1.5vh;
+    background-color: #ffffff;
+}
+
+/* MAPS ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+#mapContainer {
+    width: 100vw;
+    height: 51vh;
+    margin-top: 0.5vh;
+}
+
+.title {
+   font-size: 3.3vh;
+    margin-bottom: 0.5vh;
+    color: #BE0731;
+    font-weight: 600;
+}
+
+.address {
+    font-size: 3.2vh;
+    font-family: Objectivity;
+}
+
+.navigate {
+    color: #BE0731;
+    font-size: 3.2vh;
+}
+
+.H_ib_content {
+    line-height: 4vh;
+}
+
+/* HISTORY ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+.filler {
+    height: 1vw;
+}
+
+.historical-image {
+    z-index: 0;
+    position: absolute;
+    margin-top: 5vh;
+}
+
+.right {
+    margin-left: 51vw;
+}
+
+.historical-image img{
+    width: 45vw;
+}
+
+.H_ib_content {
+    
+}
+
+/* INFORMATIONAL PAGES -------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+.resultimage {
+    width: 88vw;
+}
+
+.location {
+    display: block;
+    margin-bottom: 1vh;
+}
+
+button.moreinfo, .navigate {
+    margin: 0.5vh 0;
+    color: #ffffff;
+    font-size: 3vh;
+}
+
+.infoBox {
+    position: fixed;
+    top: 12.5vh;
+    height: 89.5vh;
+    width: 100vw;
+    background-color: rgba(13,13,13,0.6);
+}
+
+.textInBox {
+    margin-left: 10vw;
+    margin-top: 2.5vh;
+    border: 0.5vh solid #BE0731;
+    background-color: #0D0D0D;
+    color: #ffffff;
+    width: 80vw;
+    padding: 2vh 5vw;
+}
+
+.textInBox img {
+    width: 45vw;
+}
+
+.infoBoxText {
+    display: inline-block;
+    text-align: left;
+    font-size: 2.5vh;
+}
+
+.infoRoute, .webInfo {    
+    background-color: #BE0731;
+    color: #ffffff;
+    font-weight: 800;
+    border: none;
+    padding: 0.5vh 3vw;
+    border-radius: 0.5vh;
+    font-size: 2.5vh;
+}
+
+.closeBox {
+    position: fixed;
+    right: 5vw;
+}
+
+.closeBox img {
+    height: 5vh;
+}
+
+.infoBoxEqualFlex {
+    display: flex;
+    flex-direction: row;
+}
+
+.infoBoxHalfFlex {
+    flex: 0 0 35vw;
+}
+
+.buttondiv {
+    display: inline-block;
+    margin-bottom: 1vh;
+}
