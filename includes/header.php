@@ -8,7 +8,8 @@ echo '
 <head>
 	<meta charset="UTF-8" />
 	<title>myENSCHEDE Mobile Website</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" media="(max-width: 800px)" href="style.css" />
+    <link rel="stylesheet" media="(min-width: 801px)" href="desktop_style.css" />
 	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
     <link rel="stylesheet" type="text/css" href="https://js.api.here.com/v3/3.0/mapsjs-ui.css?dp-version=1549984893" />
     <script type="text/javascript" src="https://js.api.here.com/v3/3.0/mapsjs-core.js"></script>
@@ -18,7 +19,8 @@ echo '
     <script type="text/javascript" charset="UTF-8" src="http://js.api.here.com/v3/3.0/mapsjs-places.js"></script>
     <script src="script.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.4.0/animate.min.css">
-	<link rel="stylesheet" href="style/timelify.css">
+	<link rel="stylesheet" media="(max-width: 800px)" rel="stylesheet" href="style/timelify.css">
+    <link rel="stylesheet" media="(min-width: 801px)" rel="stylesheet" href="style/desktop_timelify.css">
 </head>
     
 <body>

@@ -1,0 +1,643 @@
+/* ---------------------------------------------------------------- GENERAL STUFF --------------------------------------------------------------------- */
+
+/* Font: Vladivostok */
+@font-face {
+	font-family: Vladivostok;
+	src:
+		url(fonts/vladivostok/bold.eot), /* IE9 Compat Modes */
+		url(fonts/vladivostok/bold.woff2) format("woff2"), /* Super Modern Browsers */
+		url(fonts/vladivostok/bold.woff) format("woff"), /* Pretty Modern Browsers */
+		url(fonts/vladivostok/bold.ttf) format("truetype"); /* Safari, Android, iOS */
+	font-style: normal;
+	font-weight: 600;
+}
+
+/* Font: Objectivity */
+@font-face {
+    font-family: "Objectivity";
+    src: url("fonts/objectivity/Objectivity-Regular.ttf");    
+}
+
+
+html, body {
+    margin: auto;
+    text-align: center;
+    background-color: #0D0D0D;
+    color: #ffffff;
+    width: 25vw;
+    height: 100vh;
+}
+
+h1 {
+    font-family: Vladivostok;
+    font-size: 3.5vh;
+    text-transform: uppercase;
+}
+
+p, a, .dropped, span {
+    font-family: Objectivity;
+}
+
+p {
+    font-size: 2.5vh;
+}
+
+a {
+    font-size: 2.5vh;
+}
+
+.hidden {
+    display: none;
+}
+
+.button {
+    font-size: 2.5vh;
+}
+
+/* ------------------------------------------------------------------------ HEADER --------------------------------------------------------------------- */
+
+.header {
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    width: 100%;
+    height: 12.5vh;
+    background-color: #0D0D0D;
+    top: 0;
+    z-index: 2;    
+}
+
+.header_logo {
+    flex: 0 0 20vw; 
+}
+
+.header_logo img {
+    max-height: 10.5vh; 
+}
+
+/* ------------------------------------------------------------------------ MENU --------------------------------------------------------------------- */
+
+.menu_icon {
+    flex: 0 0 5vw; 
+    display: flex;
+    flex-direction: column;
+}
+
+.menu_icon:hover {
+    background-color: #BE0731;
+}
+
+.menu_icon:active {
+    background-color: #BE0731;
+}
+
+.menu_icon img {
+    height: 5vh;
+}
+
+#menudiv {
+    padding: 1vh 0 0 0;
+    background-color: #BE0731;
+    margin-bottom: -12.5vh;
+    position: fixed;
+    width: 25vw;
+    z-index: 2;
+}
+
+#invisiblemenu {
+    margin-top: 12.5vh;
+    padding: 1vh 0;
+    background-color: #BE0731;
+    margin-bottom: -12.5vh;
+}
+
+.menu_item {
+    border-bottom: 0.1vh solid #71051e;
+}
+
+.menu_item:hover {
+    background-color: #ffffff;
+}
+
+.menu_item:active {
+    background-color: #ffffff;
+}
+
+.menu_item a {
+    text-decoration: none;
+    color: #ffffff;
+    line-height: 5vh;
+}
+
+.menu_item a:active {
+    color: #000000;
+}
+
+.menu_item a:hover {
+    color: #000000;
+}
+
+/* ------------------------------------------------------------------------ COLOURED BOXES --------------------------------------------------------------------- */
+
+.bodytext {
+    margin-top: 12.5vh;
+}
+
+.whitebox, .redbox {
+    padding: 0.5vh 0;
+}
+
+.whitebox {
+    background-color: #ffffff;    
+}
+
+.redbox {
+    background-color: #BE0731;
+    margin: -0.5vh 0;
+}
+
+.redbox h1 {
+    color: #ffffff;
+}
+
+.whitebox h1, .whitebox p {
+    color: #0D0D0D;
+    margin: 1vh 0.75vw;
+}
+
+.whitebox img {
+    width: 25vw;
+    margin-bottom: -1vh;
+}
+
+#firstbox {
+    padding-top: 1.5vh;
+}
+
+/* ------------------------------------------------------------------------ PAGE TOP --------------------------------------------------------------------- */
+
+.redbox {
+    background-repeat: none;
+    background-size: cover;
+}
+
+#events_redbox {
+    background-image: url(graphics/PageTop/Top_Events.jpg);
+}
+
+#nature_redbox {
+    background-image: url(graphics/PageTop/Top_Nature.jpg);
+}
+
+#shopping_redbox {
+    background-image: url(graphics/PageTop/Top_Shopping.jpg);
+}
+
+#culture_redbox {
+    background-image: url(graphics/PageTop/Top_Culture.jpg);
+}
+
+#history_redbox {
+    background-image: url(graphics/PageTop/Top_History.jpg);
+}
+
+#evening_redbox {
+    background-image: url(graphics/PageTop/Top_Evening.jpg);
+}
+
+#doing_redbox {
+    background-image: url(graphics/PageTop/Top_Doing.jpg);
+}
+
+#eating_redbox {
+    background-image: url(graphics/PageTop/Top_Eating.jpg);
+}
+
+#event_body {
+    background-image: url(graphics/Events/events.jpg);
+    background-repeat: none;
+    background-size: cover;
+    height: 30vh;
+}
+
+/* ------------------------------------------------------------------------ INDEX: LETTER SLIDER --------------------------------------------------------------------- */
+
+.slider {
+    display: flex;
+    flex-direction: row;
+    width: 25vw; 
+    margin: 0;
+    z-index: -1;
+}
+
+.letterPicking {
+    display: inline-block;
+    text-align: center;
+    width: 25vw;
+    z-index: -1;
+}
+
+.pickOne p {
+    color: #ffffff;
+    font-size: 2.5vh;
+}
+
+.arrow {
+    flex: 0 0 3.75vw;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0;
+    border: none;
+    background: none;
+    z-index: 1;
+}
+
+.arrow img {
+    width: 3.75vw;
+    z-index: 1;
+}
+
+.slider_letter {
+    flex: 0 0 17.5vw;
+}
+
+.slider_letter img {
+    width: 15vw;
+    margin-left: 1.25vw;
+    margin-right: 1.25vw;
+}
+
+/* ------------------------------------------------------------------------ INDEX: SMALL LETTER IMAGES --------------------------------------------------------------------- */
+
+.all_letters {
+    display: flex;
+    flex-direction: row;
+    padding: 0 0.5vw;
+}
+
+.smallLetter {
+    flex: 0 0 3vw;
+}
+
+.smallLetter:hover {
+    background-color: #BE0731;
+}
+
+.smallLetter:active {
+    background-color: #ffffff;
+}
+
+.smallLetter img {
+    width: 3vw;
+}
+
+
+/* ------------------------------------------------------------------------ ABOUT: EQUAL FLEX DIVISIONS --------------------------------------------------------------------- */
+
+.equalflex {
+    display: flex;
+    flex-direction: row;
+}
+
+.halfflex {
+    flex: 0 0 12.5vw;
+}
+
+.halfflex img {
+    width: 3.75vw;
+}
+
+/* ------------------------------------------------------------------------ TEAM PAGE & SPONSORS --------------------------------------------------------------------- */
+
+.teammember_left, .teammember_right, .category_intro {
+    display: flex;
+    flex-direction: row;
+    padding: 0 0.5vw;
+}
+
+.teammember_left {
+    background-color: #0D0D0D;
+}
+
+.teammember_left p {
+    color: #ffffff;
+}
+
+.teamintro img {
+    width: 25vw;
+}
+
+.whitebox p {
+    font-size: 2.5vh;
+}
+
+.portrait {
+    flex: 0 0 10vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.portrait img {
+    margin: 0.5vh 0.5vw;
+    width: 8vw;
+}
+
+.role {
+    flex: 0 0 14.5vw;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    flex: 0 0 1;
+}
+
+.nothingness {
+    flex: 1 1 0;
+}
+
+/* ------------------------------------------------------------------------ CATEGORY DIVS --------------------------------------------------------------------- */
+
+.category_letter, .category content {
+    display: inline-block;
+}
+
+.category_letter img {
+    width: 2.5vw;
+}
+
+.category_expand {
+    margin: 0 0.5vw 2vh 0.5vw;
+}
+
+.category, .mapCat, .choose {
+    background-color: #0D0D0D;
+    color: #ffffff;
+    display: inline-block;
+    border: none;
+    border-radius: 5%;
+    padding: 1vh 0.75vw;
+    margin: 0.5vh 0.125vw;
+    font-size: 2.5vh;
+}
+
+.search {
+    margin: 1vh 0;
+    background-color: #ffffff;
+    color: #0D0D0D;
+    font-weight: 800;
+    font-size: 2.5vh;
+    border: none;
+    border-radius: 5%;
+    padding: 1vh 0.75vw;
+}
+
+
+/* ------------------------------------------------------------------------ DROPDOWN DIVS --------------------------------------------------------------------- */
+
+.dropped {
+    margin: 0;
+    position: absolute;
+}
+
+.dropped_item {
+    background-color: #0D0D0D;
+    color: #ffffff;
+    font-size: 2.5vh;
+    width: 12.5vw;
+    padding: 0.5vh 0;
+}
+
+.dropped_item:hover {
+    background-color: #BE0731;
+    color: #ffffff;
+    font-weight: 800;
+}
+
+.dropdown_date {
+    background-color: #0D0D0D;
+    color: #ffffff;
+    display: inline-block;
+    border: none;
+    border-radius: 5%;
+    padding: 1vh 0.75vw;
+    margin: 0.5vh 0;
+    font-size: 2.5vh;
+}
+
+.selected {
+    background-color: #BE0731;
+    color: #ffffff;
+    font-weight: 800;
+}
+
+/* ------------------------------------------------------------------------ EVENT RESULTS PAGE --------------------------------------------------------------------- */
+
+.results {
+    background-color: #ffffff;
+    margin-top: -1vh;
+    margin-bottom: -1vh;
+}
+
+.results span {
+    font-size: 2.5vh;
+    font-weight: 800;
+}
+
+.searchresult {
+    background-color: #0D0D0D;
+    color: #ffffff;
+    padding: 1vh 0.75vw;
+    margin: 1vh 0.75vw;
+}
+
+.placetime {
+    display: flex;
+    flex-direction: row;
+    margin: -0.5vh 0 0.5vh 0;
+}
+
+.placetime_half {
+    flex: 0 0 11vw;
+    padding: 1vh 0;
+    background-color: #BE0731;
+}
+
+.resultbody {
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+}
+
+.resultpic {
+    flex: 0 0 9.25vw;
+    display: flex; 
+    flex-direction: column;
+}
+
+.resultpic img {
+    width: 9.25vw;
+}
+
+.resulttext {
+    flex: 0 0 12.75vw;
+    text-align: left;
+    padding-left: 0.5vw;
+    display: flex;
+    flex-direction: column;
+    margin: 0.5vh 0;
+}
+
+.resulttext p {
+    padding: 0;
+    margin: 0;
+}
+
+.searchresult button {    
+    background-color: #BE0731;
+    border: none;
+    padding: 0.5vh 1.25vw;
+    border-radius: 0.5vh;
+}
+
+.searchresult a {
+    text-decoration: none;
+    color: #ffffff; 
+    font-size: 2.5vh;
+    font-family: Objectivity;
+    font-weight: 800;
+}
+
+.whitefiller {
+    height: 1.5vh;
+    background-color: #ffffff;
+}
+
+/* MAPS ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+#mapContainer {
+    width: 25vw;
+    height: 51vh;
+    margin-top: 0.5vh;
+}
+
+.title {
+   font-size: 2.7vh;
+    margin-bottom: 0.5vh;
+    color: #BE0731;
+    font-weight: 600;
+}
+
+.address {
+    font-size: 2.5vh;
+    font-family: Objectivity;
+}
+
+.navigate {
+    color: #BE0731;
+    font-size: 2.5vh;
+}
+
+.H_ib_content {
+    line-height: 3vh;
+}
+
+/* HISTORY ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+.filler {
+    height: 1vh;
+}
+
+.historical-image {
+    z-index: 0;
+    position: absolute;
+    margin-top: 5vh;
+}
+
+.right {
+    margin-left: 12.75vw;
+}
+
+.historical-image img{
+    width: 11.25vw;
+}
+
+/* INFORMATIONAL PAGES -------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+.resultimage {
+    width: 22vw;
+}
+
+.location {
+    display: block;
+    margin-bottom: 1vh;
+}
+
+button.moreinfo, .navigate {
+    margin: 0.5vh 0;
+    color: #ffffff;
+    font-size: 2.5vh;
+}
+
+.infoBox {
+    position: fixed;
+    top: 12.5vh;
+    height: 89.5vh;
+    width: 25vw;
+    background-color: rgba(13,13,13,0.6);
+}
+
+.textInBox {
+    margin-left: 2.5vw;
+    margin-top: 2.5vh;
+    border: 0.5vh solid #BE0731;
+    background-color: #0D0D0D;
+    color: #ffffff;
+    width: 20vw;
+    padding: 2vh 1.25vw;
+}
+
+.textInBox img {
+    width: 11.25vw;
+}
+
+.infoBoxText {
+    display: inline-block;
+    text-align: left;
+    font-size: 2.5vh;
+}
+
+.infoRoute, .webInfo {    
+    background-color: #BE0731;
+    color: #ffffff;
+    font-weight: 800;
+    border: none;
+    padding: 0.5vh 0.75vw;
+    border-radius: 0.5%;
+    font-size: 2.5vh;
+}
+
+.closeBox {
+    position: fixed;
+    right: 38.75vw;
+}
+
+.closeBox img {
+    height: 5vh;
+}
+
+.infoBoxEqualFlex {
+    display: flex;
+    flex-direction: row;
+}
+
+.infoBoxHalfFlex {
+    flex: 0 0 8.75vw;
+}
+
+.buttondiv {
+    display: inline-block;
+    margin-bottom: 1vh;
+}
